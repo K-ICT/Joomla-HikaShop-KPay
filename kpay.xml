@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashoppayment">
+	<name>KPay Payment Plugin for Hikashop</name>
+	<creationDate>1 March 2017</creationDate>
+	<version>1.0</version>
+	<author>K-ICT</author>
+	<authorEmail>sales@k-ict.org</authorEmail>
+	<authorUrl>http://www.k-ict.org</authorUrl>
+	<copyright>(C) 2017 Konsortium ICT Pantai Timur. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Extension for the KPG registered sellers to let their buyers pay using Malaysia saving and current accounts. FPX is the Internet Banking Payment Gateway by MyClear (subsidiary of Bank Negara Malaysia) that permits the buyers to pay using their saving and current bank accounts (Malaysia banks). <a href="https://www.k-ict.org/kpg/" rel="nofollow">KPG</a> or KPay is the web-based application software developed by <a href="https://www.k-ict.org/" rel="nofollow">K-ICT</a> to simplify FPX usage. There are currently seventeen (17) Internet Banking available those are CIMBclicks [CIMB Bank Berhad], Maybank2u [Malayan Banking Berhad / Maybank], Public Bank Berhad, Alliance Online, Affin Bank, HSBC, Bank Islam, Hong Leong Connect, RHB Now, iRakyat [Bank Rakyat], AmBank, Standard Chartered, OCBC Bank, Bank Muamalat, United Overseas Bank, Maybank2e, and Bank Simpanan Nasional (BSN).</description>
+	<files>
+		<filename plugin="kpay">kpay.php</filename>
+		<filename>kpay_configuration.php</filename>
+		<filename>kpay_end.php</filename>
+		<filename>FPX.jpg</filename>
+		<filename>EVSSLGoogleChrome.jpg</filename>
+		<filename>EVSSLMozillaFirefox.jpg</filename>
+		<filename>PaymentDescription001.jpg</filename>
+		<filename>PaymentDescription002.jpg</filename>
+		<filename>PaymentDescription003.jpg</filename>
+	</files>
+	<updateservers>
+		<server type="collection">https://www.k-ict.org/Joomla-HikaShop-KPay/KPG-updates/list.xml</server>
+		<server type="extension" priority="2" name="KPay for HikaShop Updates">https://www.k-ict.org/Joomla-HikaShop-KPay/KPG-updates/extension.xml</server>
+	</updateservers>
+</extension>
