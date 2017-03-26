@@ -152,7 +152,7 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 		
 		$vars=array(
 		"portal_key"=>$this->payment_params->kpay_portal_key,
-		"order_no"=>$order->order_number,
+		"order_no"=>preg_replace("/[^0-9]/","",$order->order_number),
 		"amount"=>number_format($order->order_full_price,2,'.',''),
 		"description"=>"Order no. ".$order->order_number,
 		"buyer_name"=>$order->customer->name,
