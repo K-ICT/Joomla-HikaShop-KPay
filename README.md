@@ -1,6 +1,6 @@
 # Joomla-HikaShop-KPay
 <img alt="FPX" src="https://raw.githubusercontent.com/K-ICT/Joomla-HikaShop-KPay/master/banner-960x420.jpg" />
-<p align="justify">Extension for the KPG registered sellers (using HikaShop in Joomla) to let their buyers pay using Malaysia saving and current Internet Banking accounts via FPX. It is currently eligible only for the Malaysian business / company.</p>
+<p align="justify">Plugin for the KPG registered sellers (using HikaShop in Joomla) to let their buyers pay using Malaysia saving and current Internet Banking accounts via FPX. It is currently eligible only for the Malaysian business / company.</p>
 
 <p align="justify">FPX is the Internet Banking Payment Gateway by MyClear (subsidiary of Bank Negara Malaysia) that permits the buyers to pay using their saving and current bank accounts (Malaysia banks). <a href="https://www.k-ict.org/kpg/" rel="nofollow">KPG</a> or KPay is the web-based application software developed by <a href="http://www.k-ict.org/" rel="nofollow">K-ICT</a> to simplify FPX usage.</p>
 
