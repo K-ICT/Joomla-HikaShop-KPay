@@ -35,7 +35,11 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 		$this->API_client_version="v1.1";
 		$this->API_user_agent=$this->API_client_name." ".$this->API_client_type." ".$this->API_client_version;
 		
+<<<<<<< HEAD
 		if(!(JFactory::getApplication()->input->post->get('PortalKey')))
+=======
+		if(!isset(JRequest::getVar('PortalKey')))
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 		{ # Do process on normal request by excluding the POST portalKey from KPG server start.
 			# Check all orders with 'Created' and 'Pending' status for KPay payment method start.
 			$db=JFactory::getDbo();
@@ -46,7 +50,11 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 		
 			$db->setQuery($query);
 			$records=$db->loadColumn();
+<<<<<<< HEAD
 				
+=======
+		
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 			foreach($records as $records_index=>$records_value)
 			{ # Loop each result and proceed with the checking start.
 				$dbOrder=$this->getOrder((int)@$records_value);
@@ -152,7 +160,11 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 		
 		$vars=array(
 		"portal_key"=>$this->payment_params->kpay_portal_key,
+<<<<<<< HEAD
 		"order_no"=>$order->order_number,
+=======
+		"order_no"=>preg_replace("/[^0-9]/","",$order->order_number),
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 		"amount"=>number_format($order->order_full_price,2,'.',''),
 		"description"=>"Order no. ".$order->order_number,
 		"buyer_name"=>$order->customer->name,
@@ -170,9 +182,16 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 		$data=array();
 		$filter=JFilterInput::getInstance();
 		
+<<<<<<< HEAD
 		foreach(JFactory::getApplication()->input->post->getArray() as $key=>$value)
 		{
 			$key=$filter->clean($key);
+=======
+		foreach(JRequest::get('post') as $key=>$value)
+		{
+			$key=$filter->clean($key);
+			$value=JRequest::getString($key);
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 			$vars[$key]=$value;
 			$data[]=$key.'='.$value;
 		}
@@ -229,9 +248,15 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 					$this->modifyOrder($order_id,$order_status_new,true);
 				} # Do update order if the status changed end.
 				# Do nothing if the status was unchanged.
+<<<<<<< HEAD
 						
 				# Redirect to the KPay transaction receipt page.
 				header('location:'.$this->KPay_receipt_url.'?txnId='.$vars['txnId'].'&txnEx='.$vars['txnEx']);
+=======
+				
+				# Redirect to the KPay transaction receipt page.
+				header('location:'.$this->KPay_receipt_url.'?txnId='.JRequest::getVar('txnId').'&txnEx='.JRequest::getVar('txnEx'));
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 				
 				return true;
 			} # Do process transactions those are not pending end.
@@ -253,7 +278,11 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 
 	function onPaymentConfiguration(&$element)
 	{ # Method to be executed in the back-end configuration pages start.
+<<<<<<< HEAD
 		$subtask=JFactory::getApplication()->input->post->get('subtask','');
+=======
+		$subtask=JRequest::getCmd('subtask','');
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 		parent::onPaymentConfiguration($element);
 	} # Method to be executed in the back-end configuration pages end.
 
@@ -410,7 +439,11 @@ class plgHikashoppaymentKpay extends hikashopPaymentPlugin
 		"TransactionStatus"=>$KPay_transaction_status,
 		"TransactionDescription"=>$KPay_transaction_description,
 		"FPXTransactionID"=>$KPay_FPX_transaction_id,
+<<<<<<< HEAD
 		"BusinessName"=>urldecode($KPay_curl_seller_name),
+=======
+		"BusinessName"=>$KPay_curl_seller_name,
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 		);
 		
 		return $KPay_curl_output_response_array;

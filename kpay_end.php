@@ -162,7 +162,11 @@ $KPay_order_buyer_email=@$this->vars['buyer_email'];
 					$custom_order_description.='
 					<tr align="left" valign="top" style="background:#eee;">
 					<td style="border:0px;padding:5px;"><font style="color:#630;">&#10148; Payment for</font>
+<<<<<<< HEAD
 					<br><input id="KPGorderDescription" name="KPGorderDescription" type="text" style="width:auto;" size="40" placeholder="Describe your payment here." value="'.$KPay_order_description.'">
+=======
+					<br><input id="KPGorderDescription" name="KPGorderDescription" type="text" style="width:auto;" size="40" placeholder="Describe your payment here.">
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 					</td>
 					</tr>
 					</table>
@@ -196,7 +200,11 @@ $KPay_order_buyer_email=@$this->vars['buyer_email'];
 				echo htmlspecialchars((string)$value);
 				echo '" />';
 			}
+<<<<<<< HEAD
 			JFactory::getApplication()->input->setVar('noform','1');
+=======
+			JRequest::setVar('noform',1);
+>>>>>>> 53132caf8274ba390abc5efe9a3e95210291bb94
 		?>
 	</form>
 	<script type="text/javascript">
