@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+	<name>KPay for HikaShop</name>
+	<description>Latest version of KPay plugin for HikaShop</description>
+	<element>kpay</element>
+	<type>plugin</type>
+	<version>1.0</version>
+	<folder>hikashoppayment</folder>
+	<infourl title="Developer website">http://www.k-ict.org/Joomla-HikaShop-KPay/</infourl>
+	<downloads>
+		<downloadurl type="full" format="zip">https://github.com/K-ICT/Joomla-HikaShop-KPay/archive/master.zip</downloadurl>
+	</downloads>
+	<tags>
+		<tag>stable</tag>
+	</tags>
+	<maintainer>K-ICT</maintainer>
+	<maintainerurl>http://www.k-ict.org</maintainerurl>
+	<targetplatform name="joomla" version="3.6" />
+</update>
+</updates>
